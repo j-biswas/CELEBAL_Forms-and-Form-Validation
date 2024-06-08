@@ -1,0 +1,101 @@
+.input_con{
+    label{
+        font-size: inherit;
+        display: grid;
+        gap: 5px;
+        
+        
+        input{
+            font-size: inherit; 
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+       
+        p{
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        select{
+            font-size: inherit; 
+            border: none;
+            outline: none;
+            appearance: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        option {
+            padding: 10px;
+            background-color: white;
+            color: rgb(0, 0, 0);
+            
+        }
+        
+    }
+    .inputField:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: 0.3s;
+        height: 0px;
+        background-color: var(--p-color);
+        width: -webkit-fill-available;
+    }
+    .inputField:has(input:focus):before ,.inputField:has(select:focus):before{
+        height: 2px;
+    }
+   
+    
+    .inputField{
+        display: flex;
+        flex-grow: 1;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(128, 128, 128, 0.4);
+    }
+    .inputField:has(.eye):before{
+        width: calc( 100% - 50px);
+    }
+    .inputField:has(.eye){
+        input{
+            width: calc( 100% - 50px);
+        }
+    }
+    
+    .eye{
+        border: none;
+        display: grid;
+        place-items: center;
+        width: 50px;
+        position: relative;
+        z-index: 1;
+        background-color:rgba(128, 128, 128, 0.15) ;
+    }
+    .sel_icon{
+        position:relative;
+        font-size: 16px;
+        display: grid;
+        place-items: center;
+        >*{
+            background-color: #fff;
+        }
+        
+    }
+    .inputField:hover .sel_icon{
+        display: none;
+    }
+
+    .input_wrap{
+        display: flex;
+        gap: 8px;
+    }
+
+}

@@ -1,0 +1,28 @@
+.result_con{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: min(600px , 90vw);
+    margin: 25px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    
+    
+
+    span{
+        padding: 8px 20px;
+        max-width: 50vw;
+        overflow-y: hidden;
+    }
+    span:nth-child(1),span:nth-child(2){
+        background-color: var(--p-color);
+        color: #fff;
+        font-weight: 600;
+    }
+    span:nth-last-child(1),span:nth-last-child(2){
+        border-bottom: 3px solid var(--p-color);
+        padding-bottom: 12px;
+    }
+    
+}
+

@@ -1,0 +1,22 @@
+.form_con{
+    width: min(900px , 90vw);
+    margin: 25px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    
+
+    h2{
+        margin: 0;
+        padding: 20px 0 0 20px;
+        color: var(--p-color);
+    }
+    form{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+        gap: 15px;
+        padding: 20px;
+        border-bottom: 3px solid var(--p-color);
+    }
+}
